@@ -10,6 +10,8 @@ O objetivo é classificar pacientes de 0 a 19 anos atendidos no Real Hospital Po
 pip install -r requirements.txt
 python src/limpeza.py      # data/UCMF_raw.csv -> data/UCMF_limpo.csv + results/limpeza.json
 python src/modelagem.py    # results/metricas.json + results/figuras/*.png
+python relatorio/gerar_numeros.py              # números do artigo (relatorio/numeros.tex)
+cd relatorio && pdflatex main.tex && pdflatex main.tex   # artigo IEEE
 ```
 
 Todos os sorteios usam `random_state = 42`. Duas execuções seguidas geram o mesmo `metricas.json`; só os tempos de ajuste mudam. O teste completo leva cerca de 2 minutos numa CPU comum. A versão do Python usada foi a 3.14.
