@@ -1,0 +1,15 @@
+{
+ "n_bruto": 12873,
+ "p_bruto": 21,
+ "vazios": 751,
+ "duplicatas": 240,
+ "alvo_ausente": 412,
+ "idade_divisor_original": 352.0,
+ "idade_fora_0_19": 180,
+ "contraditorios": 8,
+ "n_limpo": 11462,
+ "alvo_limpo": {
+  "Normal": 6572,
+  "Anormal": 4890
+ }
+}

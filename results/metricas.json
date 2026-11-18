@@ -1,0 +1,378 @@
+{
+ "seed": 42,
+ "atributos": {
+  "numericos": [
+   "Peso",
+   "FC",
+   "IDADE",
+   "Altura"
+  ],
+  "ordinal": [
+   "PPA"
+  ],
+  "nominais": [
+   "SEXO",
+   "B2",
+   "PULSOS",
+   "HDA 1",
+   "MOTIVO1",
+   "MOTIVO2"
+  ],
+  "excluidos": [
+   "SOPRO (leakage)",
+   "ID",
+   "Convenio",
+   "Atendimento",
+   "DN",
+   "HDA2",
+   "PA SISTOLICA",
+   "PA DIASTOLICA",
+   "IMC (derivado)"
+  ]
+ },
+ "eda": {
+  "n": 11462,
+  "alvo": {
+   "Normal": 6572,
+   "Anormal": 4890
+  },
+  "pct_anormal": 42.7,
+  "sopro": {
+   "Ausente": {
+    "n": 7102,
+    "pct_anormal": 10.1
+   },
+   "Contínuo": {
+    "n": 44,
+    "pct_anormal": 79.5
+   },
+   "Diastólico": {
+    "n": 9,
+    "pct_anormal": 100.0
+   },
+   "Sistólico": {
+    "n": 4304,
+    "pct_anormal": 95.9
+   },
+   "Sistólico e diastólico": {
+    "n": 3,
+    "pct_anormal": 100.0
+   }
+  },
+  "ausentes_pct": {
+   "Peso": 18.0,
+   "FC": 6.2,
+   "IDADE": 6.6,
+   "Altura": 31.2,
+   "SEXO": 4.6
+  }
+ },
+ "divisao": {
+  "treino": 9169,
+  "teste": 2293,
+  "pct_anormal_treino": 42.7,
+  "pct_anormal_teste": 42.7
+ },
+ "modelos": {
+  "Dummy": {
+   "melhores_params": {
+    "strategy": "most_frequent"
+   },
+   "cv_media": {
+    "roc_auc": 0.5,
+    "accuracy": 0.5733,
+    "balanced_accuracy": 0.5,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+   },
+   "cv_dp": {
+    "roc_auc": 0.0,
+    "accuracy": 0.0002,
+    "balanced_accuracy": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+   },
+   "teste": {
+    "roc_auc": 0.5,
+    "accuracy": 0.5735,
+    "balanced_accuracy": 0.5,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+   },
+   "tempo_ajuste_s": 3.1
+  },
+  "Regressão Logística": {
+   "melhores_params": {
+    "C": 1,
+    "class_weight": "balanced"
+   },
+   "cv_media": {
+    "roc_auc": 0.7878,
+    "accuracy": 0.7342,
+    "balanced_accuracy": 0.7223,
+    "precision": 0.7083,
+    "recall": 0.6414,
+    "f1": 0.6731
+   },
+   "cv_dp": {
+    "roc_auc": 0.0087,
+    "accuracy": 0.0096,
+    "balanced_accuracy": 0.0099,
+    "precision": 0.0133,
+    "recall": 0.0157,
+    "f1": 0.0124
+   },
+   "teste": {
+    "roc_auc": 0.7869,
+    "accuracy": 0.7423,
+    "balanced_accuracy": 0.7293,
+    "precision": 0.7232,
+    "recall": 0.6411,
+    "f1": 0.6797
+   },
+   "tempo_ajuste_s": 3.3
+  },
+  "Random Forest": {
+   "melhores_params": {
+    "class_weight": null,
+    "max_depth": null,
+    "min_samples_leaf": 5
+   },
+   "cv_media": {
+    "roc_auc": 0.7973,
+    "accuracy": 0.7426,
+    "balanced_accuracy": 0.7247,
+    "precision": 0.7457,
+    "recall": 0.6023,
+    "f1": 0.6662
+   },
+   "cv_dp": {
+    "roc_auc": 0.0092,
+    "accuracy": 0.0094,
+    "balanced_accuracy": 0.0101,
+    "precision": 0.0137,
+    "recall": 0.018,
+    "f1": 0.014
+   },
+   "teste": {
+    "roc_auc": 0.7881,
+    "accuracy": 0.7492,
+    "balanced_accuracy": 0.7317,
+    "precision": 0.7535,
+    "recall": 0.6125,
+    "f1": 0.6757
+   },
+   "tempo_ajuste_s": 22.8
+  },
+  "HistGradientBoosting": {
+   "melhores_params": {
+    "learning_rate": 0.05,
+    "max_depth": 3,
+    "max_iter": 200
+   },
+   "cv_media": {
+    "roc_auc": 0.7969,
+    "accuracy": 0.7425,
+    "balanced_accuracy": 0.7217,
+    "precision": 0.7596,
+    "recall": 0.5803,
+    "f1": 0.6577
+   },
+   "cv_dp": {
+    "roc_auc": 0.0069,
+    "accuracy": 0.0102,
+    "balanced_accuracy": 0.0111,
+    "precision": 0.0153,
+    "recall": 0.0208,
+    "f1": 0.0162
+   },
+   "teste": {
+    "roc_auc": 0.7908,
+    "accuracy": 0.751,
+    "balanced_accuracy": 0.7306,
+    "precision": 0.771,
+    "recall": 0.592,
+    "f1": 0.6698
+   },
+   "tempo_ajuste_s": 10.0
+  }
+ },
+ "melhor_modelo": "Random Forest",
+ "matriz_confusao": {
+  "modelo": "Random Forest",
+  "linhas_real_colunas_previsto": [
+   [
+    1119,
+    196
+   ],
+   [
+    379,
+    599
+   ]
+  ],
+  "rotulos": [
+   "Normal",
+   "Anormal"
+  ]
+ },
+ "limiar": {
+  "alvo_sensibilidade_treino": 0.8,
+  "limiar": 0.318,
+  "teste": {
+   "roc_auc": 0.7881,
+   "accuracy": 0.6869,
+   "balanced_accuracy": 0.6974,
+   "precision": 0.6045,
+   "recall": 0.7689,
+   "f1": 0.6769
+  },
+  "matriz_confusao": [
+   [
+    823,
+    492
+   ],
+   [
+    226,
+    752
+   ]
+  ]
+ },
+ "erros_por_faixa": {
+  "<1": {
+   "n": 539,
+   "fn": 46,
+   "fp": 91,
+   "recall": 0.859
+  },
+  "1-3": {
+   "n": 409,
+   "fn": 71,
+   "fp": 30,
+   "recall": 0.553
+  },
+  "3-7": {
+   "n": 563,
+   "fn": 107,
+   "fp": 32,
+   "recall": 0.516
+  },
+  "7-11": {
+   "n": 390,
+   "fn": 80,
+   "fp": 14,
+   "recall": 0.433
+  },
+  "11-19": {
+   "n": 260,
+   "fn": 56,
+   "fp": 12,
+   "recall": 0.282
+  }
+ },
+ "importancia_permutacao": {
+  "modelo": "Random Forest",
+  "metrica": "queda de ROC-AUC no teste",
+  "media": {
+   "MOTIVO2": 0.0567,
+   "MOTIVO1": 0.0441,
+   "B2": 0.0341,
+   "FC": 0.0185,
+   "HDA 1": 0.0181,
+   "PPA": 0.0045,
+   "Peso": 0.0033,
+   "SEXO": 0.003,
+   "IDADE": 0.0024,
+   "Altura": 0.0018,
+   "PULSOS": 0.0012
+  },
+  "dp": {
+   "MOTIVO2": 0.0058,
+   "MOTIVO1": 0.0055,
+   "B2": 0.0023,
+   "FC": 0.0035,
+   "HDA 1": 0.0021,
+   "PPA": 0.0008,
+   "Peso": 0.0031,
+   "SEXO": 0.0012,
+   "IDADE": 0.0021,
+   "Altura": 0.0006,
+   "PULSOS": 0.0004
+  }
+ },
+ "coef_regressao_logistica": {
+  "nom__B2_Normal": -1.83,
+  "nom__PULSOS_Desconhecido": -0.83,
+  "nom__MOTIVO2_6 - Cardiopatia na familia": -0.604,
+  "nom__B2_infrequent_sklearn": -0.602,
+  "nom__MOTIVO2_6 - HAS/dislipidemia/obesidade": -0.561,
+  "nom__MOTIVO1_5 - Parecer cardiológico": -0.528,
+  "nom__B2_Única": 0.743,
+  "nom__MOTIVO2_infrequent_sklearn": 0.831,
+  "nom__MOTIVO1_1 - Cardiopatia já estabelecida": 0.943,
+  "nom__PULSOS_Femorais diminuídos": 1.144,
+  "nom__MOTIVO2_6 - Sopro": 1.264,
+  "nom__B2_Hiperfonética": 1.684
+ },
+ "sensibilidade": {
+  "modelo": "Random Forest",
+  "resultados": {
+   "modelo final (sem SOPRO)": {
+    "cv_media": {
+     "roc_auc": 0.7973,
+     "accuracy": 0.7426,
+     "balanced_accuracy": 0.7247,
+     "precision": 0.7457,
+     "recall": 0.6023,
+     "f1": 0.6662
+    },
+    "cv_dp": {
+     "roc_auc": 0.0092,
+     "accuracy": 0.0094,
+     "balanced_accuracy": 0.0101,
+     "precision": 0.0137,
+     "recall": 0.018,
+     "f1": 0.014
+    }
+   },
+   "com SOPRO (leakage)": {
+    "cv_media": {
+     "roc_auc": 0.9508,
+     "accuracy": 0.9266,
+     "balanced_accuracy": 0.9198,
+     "precision": 0.9504,
+     "recall": 0.8737,
+     "f1": 0.9104
+    },
+    "cv_dp": {
+     "roc_auc": 0.0083,
+     "accuracy": 0.0076,
+     "balanced_accuracy": 0.008,
+     "precision": 0.0115,
+     "recall": 0.013,
+     "f1": 0.0094
+    }
+   },
+   "sem SOPRO e sem MOTIVO1/2": {
+    "cv_media": {
+     "roc_auc": 0.7069,
+     "accuracy": 0.6695,
+     "balanced_accuracy": 0.6425,
+     "precision": 0.6637,
+     "recall": 0.4583,
+     "f1": 0.542
+    },
+    "cv_dp": {
+     "roc_auc": 0.015,
+     "accuracy": 0.0114,
+     "balanced_accuracy": 0.0111,
+     "precision": 0.0235,
+     "recall": 0.016,
+     "f1": 0.015
+    }
+   }
+  }
+ }
+}

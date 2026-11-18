@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+relatorio/*.aux
+relatorio/*.log
+relatorio/*.out
+relatorio/*.synctex.gz
