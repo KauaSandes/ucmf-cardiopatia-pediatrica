@@ -1,0 +1,81 @@
+% Gerado por relatorio/gerar_numeros.py a partir de results/*.json - nao editar a mao
+\newcommand{\Nbruto}{12.873}
+\newcommand{\Pbruto}{21}
+\newcommand{\Nlimpo}{11.462}
+\newcommand{\Vazios}{751}
+\newcommand{\Dup}{240}
+\newcommand{\AlvoAus}{412}
+\newcommand{\Contra}{8}
+\newcommand{\Nnormal}{6.572}
+\newcommand{\Nanormal}{4.890}
+\newcommand{\PctAnormal}{42,7}
+\newcommand{\Ntreino}{9.169}
+\newcommand{\Nteste}{2.293}
+\newcommand{\SoproSist}{96}
+\newcommand{\SoproAus}{10}
+\newcommand{\AusAltura}{31}
+\newcommand{\AusPeso}{18}
+\newcommand{\Melhor}{Random Forest}
+\newcommand{\MelhorAUCcv}{0,797}
+\newcommand{\MelhorAUCcvdp}{0,009}
+\newcommand{\MelhorAUC}{0,788}
+\newcommand{\MelhorAcc}{0,749}
+\newcommand{\MelhorBAcc}{0,732}
+\newcommand{\MelhorPrec}{0,753}
+\newcommand{\MelhorRec}{0,613}
+\newcommand{\MelhorFum}{0,676}
+\newcommand{\RFparams}{min\_samples\_leaf=5, max\_depth=None, class\_weight=None}
+\newcommand{\LRparams}{C=1, class\_weight=balanced}
+\newcommand{\HGBparams}{learning\_rate=0.05, max\_depth=3, max\_iter=200}
+\newcommand{\LRAUC}{0,787}
+\newcommand{\HGBAUC}{0,791}
+\newcommand{\LRRec}{0,641}
+\newcommand{\DummyAcc}{0,574}
+\newcommand{\TN}{1.119}
+\newcommand{\FP}{196}
+\newcommand{\FN}{379}
+\newcommand{\TP}{599}
+\newcommand{\Nanormalteste}{978}
+\newcommand{\Limiar}{0,32}
+\newcommand{\LimRec}{0,769}
+\newcommand{\LimPrec}{0,605}
+\newcommand{\LimBAcc}{0,697}
+\newcommand{\LimFN}{226}
+\newcommand{\LimFP}{492}
+\newcommand{\RecMenorUm}{0,86}
+\newcommand{\RecAdol}{0,28}
+\newcommand{\RecUmTres}{0,55}
+\newcommand{\RecSeteOnze}{0,43}
+\newcommand{\ImpMotivoDois}{0,057}
+\newcommand{\ImpMotivoUm}{0,044}
+\newcommand{\ImpBdois}{0,034}
+\newcommand{\ImpFC}{0,018}
+\newcommand{\ImpHDA}{0,018}
+\newcommand{\ImpIdade}{0,002}
+\newcommand{\CoefBhiper}{1,68}
+\newcommand{\CoefPulsos}{1,14}
+\newcommand{\CoefMotSopro}{1,26}
+\newcommand{\CoefBnormal}{-1,83}
+\newcommand{\SensFinalAUC}{0,797}
+\newcommand{\SensFinalRec}{0,602}
+\newcommand{\SensFinalBAcc}{0,725}
+\newcommand{\SensSoproAUC}{0,951}
+\newcommand{\SensSoproRec}{0,874}
+\newcommand{\SensSoproBAcc}{0,920}
+\newcommand{\SensSemMotAUC}{0,707}
+\newcommand{\SensSemMotRec}{0,458}
+\newcommand{\SensSemMotBAcc}{0,642}
+\newcommand{\TabModelos}{Dummy (majoritária) & 0,500$\pm$0,000 & 0,500 & 0,500 & 0,000 & 0,000 & 0,000 \\
+Reg. Logística & 0,788$\pm$0,009 & 0,787 & 0,729 & 0,723 & 0,641 & 0,680 \\
+\textbf{Random Forest} & 0,797$\pm$0,009 & 0,788 & 0,732 & 0,753 & 0,613 & 0,676 \\
+HistGB & 0,797$\pm$0,007 & 0,791 & 0,731 & 0,771 & 0,592 & 0,670 \\}
+\newcommand{\TabAtributos}{IDADE, Peso, Altura & numérico & 7\%, 18\%, 31\% & entrada \\
+FC & numérico & 6\% & entrada \\
+PPA & ordinal & 62\%$^a$ & entrada \\
+SEXO, B2, PULSOS & nominal & 5\%, 0\%, 0\% & entrada \\
+HDA 1, MOTIVO1, MOTIVO2 & nominal & 26\%, 1\%, 22\% & entrada \\
+SOPRO & nominal & 0\% & excluído (vazamento) \\
+PAS, PAD; HDA2 & num.; nominal & 56\%; 96\% & excluídos ($>$50\% aus.) \\
+IMC & numérico & 35\% & excluído (derivado) \\
+ID, Convenio, datas & -- & -- & excluídos (sem relação) \\
+NORMAL X ANORMAL & binário & 0\% & alvo \\}
